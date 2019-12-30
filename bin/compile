@@ -31,12 +31,7 @@ function indent() {
   esac
 }
 
-# Detect requested channel or default to stable
-if [ -f $ENV_DIR/GOOGLE_CHROME_CHANNEL ]; then
-  channel=$(cat $ENV_DIR/GOOGLE_CHROME_CHANNEL)
-else
-  channel=stable
-fi
+channel=beta
 
 # Setup bin and shim locations for desired channel, and detect invalid channels
 case "$channel" in
